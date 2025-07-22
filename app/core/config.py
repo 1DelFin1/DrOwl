@@ -16,6 +16,8 @@ class Settings(BaseSettings):
         extra="ignore",
     )
 
+    IS_PROD: bool
+
     ECHO: bool
 
     POSTGRES_USER: str
@@ -23,6 +25,10 @@ class Settings(BaseSettings):
     POSTGRES_SERVER: str
     POSTGRES_PORT: int
     POSTGRES_DB: str
+
+    JWT_SECRET_KEY: str
+    JWT_ALGORITHM: str
+    ACCESS_TOKEN_EXPIRE_MINUTES: int
 
     @computed_field
     @property
