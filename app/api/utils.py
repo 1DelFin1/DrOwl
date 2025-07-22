@@ -60,7 +60,7 @@ class Authorization:
             "username": user.email,
             "email": user.email,
             "gender": user.gender,
-            "birthday": user.birthday,
+            "birthday": str(user.birthday.isoformat()),
             "first_name": user.first_name,
             "last_name": user.last_name,
         }
