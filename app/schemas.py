@@ -37,3 +37,18 @@ class UserUpdateSchema(UserBaseSchema):
 class UserInDBSchema(UserBaseSchema):
     id: UUID
     hashed_password: str
+
+
+class DocumentCreateSchema(BaseModel):
+    user_id: UUID
+
+
+class DocumentResponseSchema(BaseModel):
+    id: UUID
+    statis: str
+
+
+class OCRTaskSchema(BaseModel):
+    doc_id: UUID
+    user_id: UUID
+    file_path: str

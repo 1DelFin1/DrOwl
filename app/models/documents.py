@@ -21,7 +21,7 @@ class DocumentModel(Base, TimestampMixin):
         ForeignKey("users.id", ondelete="CASCADE"), nullable=False
     )
     original_path: Mapped[String] = mapped_column(String(255), nullable=False)
-    processed_text: Mapped[String] = mapped_column(String)
+    processed_text: Mapped[String] = mapped_column(String, nullable=True)
     status: Mapped[String] = mapped_column(String(50), nullable=False)
 
     user: Mapped["UserModel"] = relationship(
