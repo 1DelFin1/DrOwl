@@ -18,17 +18,26 @@ class Settings(BaseSettings):
 
     IS_PROD: bool
 
-    ECHO: bool
-
     POSTGRES_USER: str
     POSTGRES_PASSWORD: str
     POSTGRES_SERVER: str
     POSTGRES_PORT: int
     POSTGRES_DB: str
 
+    ECHO: bool
+
     JWT_SECRET_KEY: str
     JWT_ALGORITHM: str
     ACCESS_TOKEN_EXPIRE_MINUTES: int
+
+    MINIO_ENDPOINT: str
+    MINIO_ACCESS: str
+    MINIO_SECRET: str
+    MINIO_SECURE: bool
+
+    RABBITMQ_URL: str
+
+    ES_LINK: str
 
     @computed_field
     @property
